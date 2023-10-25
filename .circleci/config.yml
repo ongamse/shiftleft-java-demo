@@ -23,7 +23,8 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - say-hellosteps:
+      - say-hello
+      steps:
     - run:
         name: Build the application and analyze
         command: |
