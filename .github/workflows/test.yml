@@ -2,7 +2,7 @@
 ---
 # This workflow integrates ShiftLeft NG SAST with GitHub
 # Visit https://docs.shiftleft.io for help
-name: QwietTest
+name: QwietTestNT
 
 on:
   pull_request:
