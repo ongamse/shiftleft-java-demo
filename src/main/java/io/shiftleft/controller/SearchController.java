@@ -19,11 +19,11 @@ public class SearchController {
 
   @RequestMapping(value = "/search/user", method = RequestMethod.GET)
   public String doGetSearch(@RequestParam String foo, HttpServletResponse response, HttpServletRequest request) {
-    java.lang.String message = "";
+    java.lang.Object message = new Object();
     try {
       ExpressionParser parser = new SpelExpressionParser();
       Expression exp = parser.parseExpression(foo);
-      message = exp.getValue().toString();
+      message = (Object) exp.getValue();
     } catch (Exception ex) {
       System.out.println(ex.getMessage());
     }
