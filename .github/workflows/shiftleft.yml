@@ -32,7 +32,7 @@ jobs:
       run: |
         ${GITHUB_WORKSPACE}/sl --version
         ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
-          --app shiftleft-java-demo \
+          --app qwietAI-java-demo \
           --tag branch=${{ github.head_ref }} \
           --javasrc --container 18fgsa/s3-resource .
       env:
@@ -52,7 +52,7 @@ jobs:
         curl https://cdn.shiftleft.io/download/sl > ${GITHUB_WORKSPACE}/sl && chmod a+rx ${GITHUB_WORKSPACE}/sl
     - name: Validate Build Rules
       run: |
-        ${GITHUB_WORKSPACE}/sl check-analysis --app shiftleft-java-demo \
+        ${GITHUB_WORKSPACE}/sl check-analysis --app qwietAI-java-demo \
             --github-pr-number=${{github.event.number}} \
             --github-pr-user=${{ github.repository_owner }} \
             --github-pr-repo=${{ github.event.repository.name }} \
