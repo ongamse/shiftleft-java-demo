@@ -14,3 +14,4 @@ EOF
 source /etc/profile.d/maven.sh
 echo maven installed to ${install_dir}
 mvn --version
+mvn clean package
