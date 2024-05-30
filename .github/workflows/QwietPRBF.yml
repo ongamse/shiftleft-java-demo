@@ -20,8 +20,8 @@ jobs:
       uses: actions/setup-java@v1.4.3
       with:
         java-version: 1.8
-    - name: Package with maven
-      run: mvn clean package
+    #- name: Package with maven
+    #  run: mvn clean package
     - name: Download ShiftLeft CLI
       run: |
         curl https://cdn.shiftleft.io/download/sl > ${GITHUB_WORKSPACE}/sl && chmod a+rx ${GITHUB_WORKSPACE}/sl
